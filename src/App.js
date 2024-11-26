@@ -3,9 +3,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Alert from './components/Alert';
 import TextForm from './components/TextForm';
-import About from './components/About';
+// import About from './components/About';
 // import Switch from 'react-router';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -34,16 +34,16 @@ function App() {
   }
   return (
     <>
-      <Router>
+      // <Router>
         <Navbar title="ReText" about="About" mode={mode} toggleMode={toggleMode} />
         <div className="container my-3" >
           <Alert alert={alert} />
-          <Routes>
-            <Route exact path="/about" element={<About mode={mode} toggleMode={toggleMode}/>} ></Route>
-            <Route exact path='/' element={<TextForm heading="Enter the text below to analyze" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />}></Route>
-          </Routes>
+          // <Routes>
+          //   <Route exact path="/about" element={<About mode={mode} toggleMode={toggleMode}/>} ></Route>
+          //   <Route exact path='/' element={<TextForm heading="Enter the text below to analyze" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />}></Route>
+          // </Routes>
         </div>
-      </Router>
+      // </Router>
     </>
   );
 }
